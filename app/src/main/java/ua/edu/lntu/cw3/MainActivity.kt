@@ -51,9 +51,20 @@ fun AffirmationItemCard(affirmationItem: ItemAffirmations, modifier: Modifier = 
             contentDescription = stringResource(id = affirmationItem.stringResourceId),
             modifier = Modifier
                 .height(100.dp)
-                .fillMaxWidth(),
+                .fillMaxWidth()
             contentScale = ContentScale.Crop
         )
+    }
+}
+
+@Composable
+fun AffirmationItemList(affirmationItemList: List<ItemAffirmations>, modifier: Modifier) {
+    LazyVerticalGrid(columns = GridCells.Fixed(2), userScrollEnabled = true) {
+        items(affirmationItemList) {
+                affirmationItem -> AffirmationItemCard(
+            affirmationItem = affirmationItem,
+            modifier = Modifier)
+        }
     }
 }
 
