@@ -50,8 +50,10 @@ fun AffirmationItemCard(affirmationItem: ItemAffirmations, modifier: Modifier = 
             painter = painterResource(id = affirmationItem.imageResourceId),
             contentDescription = stringResource(id = affirmationItem.stringResourceId),
             modifier = Modifier
+                .padding(10.dp)
                 .height(100.dp)
                 .fillMaxWidth()
+                .clip(shape = RoundedCornerShape(10.dp)),
             contentScale = ContentScale.Crop
         )
     }
