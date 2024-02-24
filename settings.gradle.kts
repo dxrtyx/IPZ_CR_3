@@ -13,5 +13,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "IPZ_CR_3"
+rootProject.name = "<Vyrymchuk_Bohdan_CR_3>"
 include(":app")
